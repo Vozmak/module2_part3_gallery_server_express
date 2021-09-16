@@ -38,7 +38,7 @@ async function displayImgList(): Promise<void> {
 
   const page = getPage();
 
-  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery?page=${page}`, {
+  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}`, {
     method: 'GET',
     headers: {
       "Authorization": localStorage.token

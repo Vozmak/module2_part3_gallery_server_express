@@ -31,7 +31,7 @@ next.onclick = function () {
 async function displayImgList() {
     const gallery = document.querySelector(".gallery");
     const page = getPage();
-    const imgList = await fetch(`http://127.0.0.1:2000/gallery?page=${page}`, {
+    const imgList = await fetch(`http://127.0.0.1:2000/gallery/${page}`, {
         method: 'GET',
         headers: {
             "Authorization": localStorage.token
