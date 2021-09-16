@@ -6,24 +6,19 @@ const fs = require("fs");
 const util = require("util");
 const readdir = util.promisify(fs.readdir);
 async function displayGallery(req) {
-    if (req.headers.authorization === 'token') {
-        const total = fs.readdirSync('./server/gallery/img').length;
-        const page = req.params.page || '1';
-        if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {
-            return {
-                errorMessage: 'Указаной страницы несуществует',
-            };
-        }
-        const imgArray = await readdir(`./server/gallery/img/${page}`);
-        const images = imgArray.map((img) => path.join(`../../server/gallery/img/${page}`, img));
+    const total = fs.readdirSync('./server/gallery/img').length;
+    const page = req.params.page || '1';
+    if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {
         return {
-            objects: images,
-            page: page,
-            total: total,
+            errorMessage: 'Указаной страницы несуществует',
         };
     }
+    const imgArray = await readdir(`./server/gallery/img/${page}`);
+    const images = imgArray.map((img) => path.join(`../../server/gallery/img/${page}`, img));
     return {
-        errorMessage: 'Unauthorized',
+        objects: images,
+        page: page,
+        total: total,
     };
 }
 exports.displayGallery = displayGallery;
