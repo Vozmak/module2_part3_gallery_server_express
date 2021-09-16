@@ -19,7 +19,7 @@ function routes(app) {
         let gallery = await (0, gallery_1.displayGallery)(req);
         if ("errorMessage" in gallery && gallery.errorMessage) {
             res.setHeader('Access-Control-Allow-Origin', '*');
-            res.writeHead(401);
+            res.writeHead(404);
             res.end(JSON.stringify(gallery));
             return;
         }

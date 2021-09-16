@@ -9,6 +9,17 @@ const hostname = '127.0.0.1';
 app.use(cors({
     origin: '*',
 }));
+app.use('/gallery/:page', (req, res, next) => {
+    if (!req.headers.authorization || req.headers.authorization !== 'token') {
+        res.writeHead(401);
+        res.end(JSON.stringify({
+            errorMessage: 'Unauthorized'
+        }));
+    }
+    else {
+        next();
+    }
+});
 (0, routes_1.routes)(app);
 app.listen(PORT, hostname, () => {
     console.log(`Listening server: ${hostname}:${PORT}`);
