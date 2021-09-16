@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "watch": true,
+    "strict": true,
+    "module": "commonjs",
+    "target": "ES2021",
+    "sourceMap": true
+  },
+  "include": [
+    "client",
+    "server",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
