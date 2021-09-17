@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import { displayGallery } from '../get/gallery';
-import { login } from '../post/login';
+import { displayGallery } from '../gallery/gallery';
+import { login } from '../login/login';
 
 function routes (app: core.Express) {
   app.post('/authorization', (req: Request, res: Response) => {
@@ -14,19 +14,21 @@ function routes (app: core.Express) {
     req.on('end', () => {
       let resBody = login(body);
       res.setHeader('Access-Control-Allow-Origin', '*');
+      if ("errorMessage" in resBody && resBody.errorMessage) {
+        res.writeHead(406);
+      }
       res.end(JSON.stringify(resBody));
     });
   })
 
   app.get('/gallery/:page', async (req: Request, res: Response) => {
     let gallery = await displayGallery(req);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     if ("errorMessage" in gallery && gallery.errorMessage) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
       res.writeHead(404);
       res.end(JSON.stringify(gallery));
       return;
     }
-    res.setHeader('Access-Control-Allow-Origin', '*');
     res.end(JSON.stringify(gallery));
   });
 }
