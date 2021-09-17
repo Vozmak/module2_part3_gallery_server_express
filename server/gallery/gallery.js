@@ -6,15 +6,15 @@ const fs = require("fs");
 const util = require("util");
 const readdir = util.promisify(fs.readdir);
 async function displayGallery(req) {
-    const total = fs.readdirSync('./server/gallery/img').length;
+    const total = fs.readdirSync(`${__dirname}/images`).length;
     const page = req.params.page || '1';
     if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {
         return {
             errorMessage: 'Указаной страницы несуществует',
         };
     }
-    const imgArray = await readdir(`./server/gallery/img/${page}`);
-    const images = imgArray.map((img) => path.join(`../../server/gallery/img/${page}`, img));
+    const imgArray = await readdir(`${__dirname}/images/${page}`);
+    const images = imgArray.map((img) => path.join(`../../server/gallery/images/${page}`, img));
     return {
         objects: images,
         page: page,
