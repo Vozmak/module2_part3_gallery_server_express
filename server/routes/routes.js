@@ -6,15 +6,9 @@ const displayGallery_1 = require("../gallery/displayGallery");
 const login_1 = require("../login/login");
 function routes(app) {
     app.post('/authorization', (req, res) => {
-        let body = '';
-        req.on('data', (data) => {
-            body += data;
-        });
-        req.on('end', () => {
-            const resBody = (0, login_1.login)(body);
-            errorMessage(res, resBody, 406);
-            res.end(JSON.stringify(resBody));
-        });
+        const resBody = (0, login_1.login)(req);
+        errorMessage(res, resBody, 406);
+        res.end(JSON.stringify(resBody));
     });
     app.get('/gallery/:page', async (req, res) => {
         let gallery = await (0, displayGallery_1.displayGallery)(req);

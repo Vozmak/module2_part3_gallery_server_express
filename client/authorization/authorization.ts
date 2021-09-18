@@ -57,7 +57,7 @@ async function authorizationUser(user: User): Promise<ErrorMsg | Token>  {
   let response: Response = await fetch('http://127.0.0.1:2000/authorization', {
     method: "POST",
     headers: {
-      "Content-type": "application/json;charset=utf-8"
+      "Content-type": "application/json"
     },
     body: JSON.stringify(user)
   });
