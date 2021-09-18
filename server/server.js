@@ -6,14 +6,16 @@ const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const fileUpload = require("express-fileupload");
 const routes_1 = require("./routes/routes");
+const logger_1 = require("./logger/logger");
 const app = express();
 const PORT = 2000;
 const hostname = '127.0.0.1';
 const swaggerDocument = YAML.load(`${__dirname}/swagger/swaggerAPI.yaml`);
+app.use(express.json());
 app.use(cors({
     origin: '*',
 }));
-// app.use(express.json())
+app.use(logger_1.logger);
 app.use(express.static(`${__dirname}/gallery/images`));
 app.use(fileUpload());
 // app.use((req: Request, res:Response, next: NextFunction) => {
