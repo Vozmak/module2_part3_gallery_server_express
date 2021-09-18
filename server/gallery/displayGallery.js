@@ -23,4 +23,4 @@ async function displayGallery(req) {
 }
 exports.displayGallery = displayGallery;
 // Infinity load
-//# sourceMappingURL=gallery.js.map
+//# sourceMappingURL=displayGallery.js.map

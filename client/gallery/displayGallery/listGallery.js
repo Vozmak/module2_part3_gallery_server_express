@@ -1,4 +1,5 @@
 "use strict";
+// import { getPage } from './moduls/getPage';
 if (!localStorage.token)
     window.location.href = '../index.html';
 if (localStorage.timestamp < Date.now()) {
