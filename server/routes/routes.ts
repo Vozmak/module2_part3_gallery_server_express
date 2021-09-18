@@ -14,30 +14,34 @@ function routes (app: core.Express): void {
 
     req.on('end', () => {
       const resBody = login(body);
-      if ("errorMessage" in resBody && resBody.errorMessage) {
-        res.writeHead(406);
-      }
+
+      errorMessage(res, resBody, 406);
+
       res.end(JSON.stringify(resBody));
     });
   })
 
   app.get('/gallery/:page', async (req: Request, res: Response) => {
     let gallery = await displayGallery(req);
-    if ("errorMessage" in gallery && gallery.errorMessage) {
-      res.writeHead(404);
-      res.end(JSON.stringify(gallery));
-      return;
-    }
+
+    errorMessage(res, gallery, 404);
+
     res.end(JSON.stringify(gallery));
   });
 
-  app.post('/gallery/:page', (req: Request, res: Response) => {
-    const response = addImgGallery(req);
+  app.post('/gallery/:page', async (req: Request, res: Response) => {
+    const upload = await addImgGallery(req);
 
-    res.end(JSON.stringify({
-      message: 'Успешно'
-    }));
+    errorMessage(res, upload, 400);
+
+    res.end(JSON.stringify(upload));
   });
+}
+
+function errorMessage(res: Response, body: any, code: number): void {
+  if ("errorMessage" in body && body.errorMessage) {
+    res.writeHead(code);
+  }
 }
 
 export {routes}

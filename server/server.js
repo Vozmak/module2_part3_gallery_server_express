@@ -13,23 +13,23 @@ const swaggerDocument = YAML.load(`${__dirname}/swagger/swaggerAPI.yaml`);
 app.use(cors({
     origin: '*',
 }));
-app.use((req, res, next) => {
-    if (req.url !== '/authorization') {
-        if (!req.headers.authorization || req.headers.authorization !== 'token') {
-            res.writeHead(401);
-            res.end(JSON.stringify({
-                errorMessage: 'Unauthorized',
-            }));
-        }
-        else {
-            next();
-        }
-    }
-    else {
-        next();
-    }
-});
+// app.use(express.json())
+app.use(express.static(`${__dirname}/gallery/images`));
 app.use(fileUpload());
+// app.use((req: Request, res:Response, next: NextFunction) => {
+//   if (req.url !== '/authorization') {
+//     if (!req.headers.authorization || req.headers.authorization !== 'token') {
+//       res.writeHead(401);
+//       res.end(JSON.stringify({
+//         errorMessage: 'Unauthorized',
+//       }));
+//     } else {
+//       next();
+//     }
+//   } else {
+//     next();
+//   }
+// });
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 (0, routes_1.routes)(app);
 app.listen(PORT, hostname, () => {
