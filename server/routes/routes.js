@@ -12,27 +12,25 @@ function routes(app) {
         });
         req.on('end', () => {
             const resBody = (0, login_1.login)(body);
-            if ("errorMessage" in resBody && resBody.errorMessage) {
-                res.writeHead(406);
-            }
+            errorMessage(res, resBody, 406);
             res.end(JSON.stringify(resBody));
         });
     });
     app.get('/gallery/:page', async (req, res) => {
         let gallery = await (0, displayGallery_1.displayGallery)(req);
-        if ("errorMessage" in gallery && gallery.errorMessage) {
-            res.writeHead(404);
-            res.end(JSON.stringify(gallery));
-            return;
-        }
+        errorMessage(res, gallery, 404);
         res.end(JSON.stringify(gallery));
     });
-    app.post('/gallery/:page', (req, res) => {
-        const response = (0, addImgGallery_1.addImgGallery)(req);
-        res.end(JSON.stringify({
-            message: 'Успешно'
-        }));
+    app.post('/gallery/:page', async (req, res) => {
+        const upload = await (0, addImgGallery_1.addImgGallery)(req);
+        errorMessage(res, upload, 400);
+        res.end(JSON.stringify(upload));
     });
 }
 exports.routes = routes;
+function errorMessage(res, body, code) {
+    if ("errorMessage" in body && body.errorMessage) {
+        res.writeHead(code);
+    }
+}
 //# sourceMappingURL=routes.js.map
