@@ -2194,3 +2194,5 @@ September 19, 2021, 3:07:34 PM: Method - GET;
 
 Ответ сервера - 19 сентября 2021 г., 18:10:36.635: {"objects":["..\\..\\server\\gallery\\images\\2\\128706.png","..\\..\\server\\gallery\\images\\2\\162661f650c2d06a3fa072a9a97ab236.jpg","..\\..\\server\\gallery\\images\\2\\415519.jpg","..\\..\\server\\gallery\\images\\2\\640956.jpg"],"page":"2","total":3}
 
+Ответ сервера - 19 сентября 2021 г., 18:27:54.421: Server start
+
