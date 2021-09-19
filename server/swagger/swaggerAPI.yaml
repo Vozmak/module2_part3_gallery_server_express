@@ -80,6 +80,13 @@ paths:
       produces:
         - "application/json"
       parameters:
+        - in: "header"
+          name: "Authorization"
+          required: "true"
+          type: "string"
+          schema:
+            type: "string"
+            example: "token"
         - name: "page"
           in: "path"
           description: "Page gallery"
@@ -113,6 +120,13 @@ paths:
       produces:
         - "application/json"
       parameters:
+        - in: "header"
+          name: "Authorization"
+          required: "true"
+          type: "string"
+          schema:
+            type: "string"
+            example: "token"
         - name: "page"
           in: "path"
           description: "Page gallery"
