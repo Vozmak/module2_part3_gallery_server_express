@@ -13,7 +13,7 @@ type LoginResponse = {
 }
 
 async function displayGallery(req: any): Promise<LoginResponse> {
-  const total: number = fs.readdirSync(`${__dirname}/images`).length;
+  const total: number = (await readdir(`${__dirname}/images`)).length;
   const page = <string>req.params.page || '1';
 
   if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {

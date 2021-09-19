@@ -6,8 +6,8 @@ const usersAccess = {
     "vkotikov@flo.team": "po3FGas8",
     "tpupkin@flo.team": "tpupkin@flo.team",
 };
-function login(body) {
-    const user = JSON.parse(body);
+function login(req) {
+    const user = req.body;
     if (!userValidation(user)) {
         return {
             errorMessage: "Некорректный ввод email или пароль"
