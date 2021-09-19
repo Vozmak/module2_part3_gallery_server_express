@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   description: "Данный сайт предоставляет все существующие запросы на сервет. Здесь их можно опробовать и протестировать"
-  version: "1.0.0"
+  version: "3.0.1"
   title: "Swagger Express Gallery Project"
 host: "127.0.0.1:2000"
 tags:
@@ -93,7 +93,7 @@ paths:
             properties:
               objects:
                 type: "array"
-                example: ["path/to/img.jpg"]
+                example: [ "path/to/img.jpg" ]
               page:
                 type: string
                 example: "1"
@@ -102,3 +102,44 @@ paths:
                 example: "3"
         "404":
           description: "page not found"
+    post:
+      tags:
+        - gallery
+      summary: "Upload image(s)"
+      description: ""
+      operationId: "Upload image on page"
+      consumes:
+        - "multipart/form-data"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "page"
+          in: "path"
+          description: "Page gallery"
+          type: "integer"
+          format: "int64"
+        - in: "formData"
+          name: "upfile"
+          description: "FormData images"
+          required: true
+          type: "file"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+                example: "Изображения успешно загружены"
+              objects:
+                type: "array"
+                example: ['142356.png']
+        "400":
+          description: "Incorrect images"
+          schema:
+            type: "object"
+            properties:
+              errorMessage:
+                type: "string"
+                example: "Нет изображений для загрузки"

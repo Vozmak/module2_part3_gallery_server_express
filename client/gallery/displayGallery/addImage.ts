@@ -10,6 +10,9 @@ imgForm.addEventListener('submit', async (event: Event) => {
 
     const uploadImg: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}`, {
         method: "POST",
+        headers: {
+            "Authorization": localStorage.token,
+        },
         body: new FormData(imgForm),
     })
 

@@ -40,7 +40,12 @@ async function displayImgList() {
     });
     if (imgList.status !== 200) {
         let error = await imgList.json();
-        window.location.href = `gallery.html?page=${localStorage.page}`;
+        if (imgList.status === 401) {
+            window.stop();
+        }
+        else {
+            window.location.href = `gallery.html?page=${localStorage.page}`;
+        }
         return alert(error.errorMessage);
     }
     const jsonImgList = await imgList.json();

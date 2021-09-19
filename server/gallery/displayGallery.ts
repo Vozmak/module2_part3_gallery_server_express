@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as util from 'util';
+import {Request} from "express";
 
 const readdir = util.promisify(fs.readdir);
 
@@ -12,7 +13,7 @@ type LoginResponse = {
   total: number;
 }
 
-async function displayGallery(req: any): Promise<LoginResponse> {
+async function displayGallery(req: Request): Promise<LoginResponse> {
   const total: number = (await readdir(`${__dirname}/images`)).length;
   const page = <string>req.params.page || '1';
 
