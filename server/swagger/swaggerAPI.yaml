@@ -119,7 +119,7 @@ paths:
           type: "integer"
           format: "int64"
         - in: "formData"
-          name: "upfile"
+          name: "photo"
           description: "FormData images"
           required: true
           type: "file"

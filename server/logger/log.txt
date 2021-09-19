@@ -1914,3 +1914,75 @@ September 19, 2021, 3:07:34 PM: Method - GET;
 
 Ответ сервера - 19 сентября 2021 г., 17:16:19.662: Server start
 
+Ответ сервера - 19 сентября 2021 г., 17:42:58.648: Server start
+
+Запрос на сервер - 19 сентября 2021 г., 17:43:00.749: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"content-type":"application/json","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"5b3c7001-2908-4bec-9a5e-502cb9d74f46","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"67"}
+
+Ответ сервера - 19 сентября 2021 г., 17:43:00.752: {"token":"token"}
+
+Запрос на сервер - 19 сентября 2021 г., 17:44:28.593: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"authorization":"token","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"73edfec8-11ac-479d-87ed-8adea666ae48","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive"}
+
+Ответ сервера - 19 сентября 2021 г., 17:44:28.595: {"objects":["..\\..\\server\\gallery\\images\\2\\128706.png","..\\..\\server\\gallery\\images\\2\\162661f650c2d06a3fa072a9a97ab236.jpg","..\\..\\server\\gallery\\images\\2\\415519.jpg","..\\..\\server\\gallery\\images\\2\\640956.jpg"],"page":"2","total":3}
+
+Запрос на сервер - 19 сентября 2021 г., 17:45:43.65: Method - POST; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"authorization":"token","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"864c709b-d72c-47b0-93ed-384fa3f46899","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-type":"multipart/form-data; boundary=--------------------------179981077614595732379527","content-length":"24203"}
+
+Ответ сервера - 19 сентября 2021 г., 17:45:43.76: {"errorMessage":"Ошибка загрузки"}
+
+Ответ сервера - 19 сентября 2021 г., 17:46:13.592: {"errorMessage":"Нет изображений для загрузки"}
+
+Запрос на сервер - 19 сентября 2021 г., 17:46:13.590: Method - POST; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"authorization":"token","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"f702acd7-b1c4-48fa-85bb-d9ef6fde8b40","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"138950","content-type":"image/png"}
+
+Запрос на сервер - 19 сентября 2021 г., 17:46:39.351: Method - POST; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"authorization":"token","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"3ce52a52-a495-4c5a-98e1-0eb1a2610123","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-type":"multipart/form-data; boundary=--------------------------587065343407983847452475","content-length":"24208"}
+
+Ответ сервера - 19 сентября 2021 г., 17:46:39.354: {"message":"Изображения успешно загружены","objects":["6c3a83041b16cc0c9651125ad8ce31af.jpg"]}
+
+Запрос на сервер - 19 сентября 2021 г., 17:46:48.288: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","sec-ch-ua-mobile":"?0","authorization":"undefined","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"}
+
+Ответ сервера - 19 сентября 2021 г., 17:46:48.290: {"objects":["..\\..\\server\\gallery\\images\\2\\128706.png","..\\..\\server\\gallery\\images\\2\\162661f650c2d06a3fa072a9a97ab236.jpg","..\\..\\server\\gallery\\images\\2\\415519.jpg","..\\..\\server\\gallery\\images\\2\\640956.jpg","..\\..\\server\\gallery\\images\\2\\6c3a83041b16cc0c9651125ad8ce31af.jpg"],"page":"2","total":3}
+
+Запрос на сервер - 19 сентября 2021 г., 17:46:51.359: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"}
+
+Ответ сервера - 19 сентября 2021 г., 17:46:51.359: {"token":"token"}
+
+Запрос на сервер - 19 сентября 2021 г., 17:46:51.443: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","sec-ch-ua-mobile":"?0","authorization":"token","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"}
+
+Ответ сервера - 19 сентября 2021 г., 17:46:51.445: {"objects":["..\\..\\server\\gallery\\images\\2\\128706.png","..\\..\\server\\gallery\\images\\2\\162661f650c2d06a3fa072a9a97ab236.jpg","..\\..\\server\\gallery\\images\\2\\415519.jpg","..\\..\\server\\gallery\\images\\2\\640956.jpg","..\\..\\server\\gallery\\images\\2\\6c3a83041b16cc0c9651125ad8ce31af.jpg"],"page":"2","total":3}
+
+Запрос на сервер - 19 сентября 2021 г., 17:51:00.525: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5n4F"}; 
+        Headers - {"content-type":"application/json","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"698daf19-0615-46f8-b377-678a48768e08","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"66"}
+
+Ответ сервера - 19 сентября 2021 г., 17:51:00.526: {"errorMessage":"Некорректный ввод email или пароль"}
+
+Запрос на сервер - 19 сентября 2021 г., 17:51:04.812: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"content-type":"application/json","user-agent":"PostmanRuntime/7.28.4","accept":"*/*","postman-token":"300ea926-ad60-4338-a544-d821ffdf5456","host":"127.0.0.1:2000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"67"}
+
+Ответ сервера - 19 сентября 2021 г., 17:51:04.813: {"token":"token"}
+
