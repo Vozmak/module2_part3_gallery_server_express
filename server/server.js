@@ -36,5 +36,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 (0, routes_1.routes)(app);
 app.listen(PORT, hostname, () => {
     console.log(`Listening server: ${hostname}:${PORT}`);
+    (0, logger_1.logger)('Server start');
 });
 //# sourceMappingURL=server.js.map

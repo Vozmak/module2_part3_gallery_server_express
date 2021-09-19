@@ -3,6 +3,7 @@ import * as core from 'express-serve-static-core';
 import {addImgGallery} from '../gallery/addImgGallery';
 import {displayGallery} from '../gallery/displayGallery';
 import {login} from '../login/login';
+import {logger} from "../logger/logger";
 
 function routes(app: core.Express): void {
     app.post('/authorization', (req: Request, res: Response) => {
@@ -34,6 +35,7 @@ function errorMessage(res: Response, body: any, code: number): void {
     if ("errorMessage" in body && body.errorMessage) {
         res.writeHead(code);
     }
+    logger(JSON.stringify(body));
 }
 
 export {routes}

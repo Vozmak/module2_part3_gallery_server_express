@@ -4,7 +4,7 @@ import * as swaggerUi from 'swagger-ui-express';
 import * as YAML from 'yamljs';
 import * as fileUpload from 'express-fileupload'
 import { routes } from './routes/routes'
-import {logger} from "./logger/logger";
+import { logger } from "./logger/logger";
 
 const app = express();
 const PORT: number = 2000;
@@ -38,4 +38,5 @@ routes(app);
 
 app.listen(PORT, hostname, () => {
   console.log(`Listening server: ${hostname}:${PORT}`);
+  logger('Server start')
 });

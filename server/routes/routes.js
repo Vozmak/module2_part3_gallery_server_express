@@ -4,6 +4,7 @@ exports.routes = void 0;
 const addImgGallery_1 = require("../gallery/addImgGallery");
 const displayGallery_1 = require("../gallery/displayGallery");
 const login_1 = require("../login/login");
+const logger_1 = require("../logger/logger");
 function routes(app) {
     app.post('/authorization', (req, res) => {
         const resBody = (0, login_1.login)(req);
@@ -26,5 +27,6 @@ function errorMessage(res, body, code) {
     if ("errorMessage" in body && body.errorMessage) {
         res.writeHead(code);
     }
+    (0, logger_1.logger)(JSON.stringify(body));
 }
 //# sourceMappingURL=routes.js.map
