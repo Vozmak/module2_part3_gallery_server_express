@@ -10,7 +10,7 @@ import {authorizationChecker} from "./middleware/authorizationChecker";
 const app = express();
 const PORT: number = 2000;
 const hostname: string = '127.0.0.1';
-const swaggerDocument = YAML.load(`${__dirname}/swagger/swaggerAPI.yaml`);
+const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 
 app.use(cors({
     origin: '*',

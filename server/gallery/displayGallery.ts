@@ -14,7 +14,7 @@ type LoginResponse = {
 }
 
 async function displayGallery(req: Request): Promise<LoginResponse> {
-  const total: number = (await readdir(`${__dirname}/images`)).length;
+  const total: number = (await readdir(`server/gallery/images`)).length;
   const page = <string>req.params.page || '1';
 
   if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {
@@ -23,7 +23,7 @@ async function displayGallery(req: Request): Promise<LoginResponse> {
     };
   }
 
-  const imgArray = await readdir(`${__dirname}/images/${page}`);
+  const imgArray = await readdir(`server/gallery/images/${page}`);
   const images = imgArray.map((img: string) => path.join(`../../server/gallery/images/${page}`, img));
 
   return {
