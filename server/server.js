@@ -20,20 +20,6 @@ app.all('*', authorizationChecker_1.authorizationChecker);
 app.use(logger_1.logger);
 app.use(express.static(`${__dirname}/gallery/images`));
 app.use(fileUpload());
-// app.use((req: Request, res:Response, next: NextFunction) => {
-//   if (req.url !== '/authorization') {
-//     if (!req.headers.authorization || req.headers.authorization !== 'token') {
-//       res.writeHead(401);
-//       res.end(JSON.stringify({
-//         errorMessage: 'Unauthorized',
-//       }));
-//     } else {
-//       next();
-//     }
-//   } else {
-//     next();
-//   }
-// });
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 (0, routes_1.routes)(app);
 app.listen(PORT, hostname, () => {

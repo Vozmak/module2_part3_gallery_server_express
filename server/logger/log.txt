@@ -2196,3 +2196,32 @@ September 19, 2021, 3:07:34 PM: Method - GET;
 
 Ответ сервера - 19 сентября 2021 г., 18:27:54.421: Server start
 
+Ответ сервера - 19 сентября 2021 г., 18:33:13.714: Server start
+
+Запрос на сервер - 19 сентября 2021 г., 18:33:20.824: Method - GET; 
+        URL - /api-docs/; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"c20-YaHADSLwvE3kEdwr5u3Bfu2fhF8\""}
+
+Запрос на сервер - 19 сентября 2021 г., 18:33:20.896: Method - GET; 
+        URL - /api-docs/swagger-ui.css; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","accept":"text/css,*/*;q=0.1","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"style","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"23135-17bf5618701\"","if-modified-since":"Fri, 17 Sep 2021 20:10:14 GMT"}
+
+Запрос на сервер - 19 сентября 2021 г., 18:33:20.896: Method - GET; 
+        URL - /api-docs/swagger-ui-bundle.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"10aeee-17bf561956f\"","if-modified-since":"Fri, 17 Sep 2021 20:10:18 GMT"}
+
+Запрос на сервер - 19 сентября 2021 г., 18:33:20.897: Method - GET; 
+        URL - /api-docs/swagger-ui-standalone-preset.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"52540-17bf561a227\"","if-modified-since":"Fri, 17 Sep 2021 20:10:21 GMT"}
+
+Запрос на сервер - 19 сентября 2021 г., 18:33:20.898: Method - GET; 
+        URL - /api-docs/swagger-ui-init.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"1dc2-a4zbyMZqY9pCIF0cPOO/IptbzeU\""}
+
+Ответ сервера - 19 сентября 2021 г., 18:33:39.510: Server start
+
