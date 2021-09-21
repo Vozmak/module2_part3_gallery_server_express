@@ -3,7 +3,7 @@ import * as cors from 'cors';
 import * as swaggerUi from 'swagger-ui-express';
 import * as YAML from 'yamljs';
 import * as fileUpload from 'express-fileupload'
-import {routes} from './routes/routes'
+import {router} from './routes/routes'
 import {logger} from "./logger/logger";
 import {authorizationChecker} from "./middleware/authorizationChecker";
 
@@ -22,7 +22,7 @@ app.use(express.static(`${__dirname}/gallery/images`));
 app.use(fileUpload());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-routes(app);
+app.use('/', router);
 
 app.listen(PORT, hostname, () => {
     console.log(`Listening server: ${hostname}:${PORT}`);
